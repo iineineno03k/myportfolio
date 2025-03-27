@@ -1,4 +1,5 @@
 import Timeline from '@/components/Timeline'
+import Image from 'next/image'
 
 export default function About() {
   const timelineItems = [
@@ -34,8 +35,14 @@ export default function About() {
             <div className="md:col-span-1">
               <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 sticky top-24">
                 <div className="mb-6 flex justify-center">
-                  <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-blue-400 dark:from-blue-600 dark:to-blue-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-4xl font-bold">稲</span>
+                  <div className="relative w-32 h-32 rounded-full overflow-hidden">
+                    <Image 
+                      src="/images/ine.jpeg" 
+                      alt="稲田裕次郎" 
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      priority
+                    />
                   </div>
                 </div>
                 

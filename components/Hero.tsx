@@ -47,9 +47,14 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="hidden md:flex justify-center"
         >
-          {/* 後でここにプロフィール画像やイラストを追加 */}
-          <div className="relative w-64 h-64 bg-gradient-to-br from-blue-500 to-blue-400 dark:from-blue-600 dark:to-blue-500 rounded-full flex items-center justify-center shadow-lg">
-            <span className="text-white text-5xl font-bold">稲</span>
+          <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-lg">
+            <Image 
+              src="/images/ine.jpeg" 
+              alt="稲田裕次郎" 
+              fill
+              style={{ objectFit: 'cover' }}
+              priority
+            />
           </div>
         </motion.div>
       </div>
