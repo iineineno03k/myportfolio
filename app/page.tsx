@@ -1,22 +1,6 @@
 import Hero from '@/components/Hero'
-import Link from 'next/link'
-import ProjectCard from '@/components/ProjectCard'
 
 export default function Home() {
-  // フィーチャーポートフォリオ
-  const featuredProjects = [
-    {
-      title: 'ハッカソンプロジェクト: 食材管理アプリ',
-      description: '48時間のハッカソンで開発した、冷蔵庫内の食材を管理し賞味期限が近づくとレシピを提案するアプリ。チームでフロントエンド部分を担当し、優秀賞を受賞。',
-      technologies: ['React', 'TypeScript', 'Firebase'],
-    },
-    {
-      title: 'ポートフォリオサイト（本サイト）',
-      description: 'Next.jsとTailwind CSSを使用した個人ポートフォリオサイト。レスポンシブデザインとダークモード対応を実装。',
-      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-    }
-  ]
-
   return (
     <>
       <Hero />      
