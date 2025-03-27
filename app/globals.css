@@ -1,8 +1,55 @@
 @import "tailwindcss";
 
 @layer base {
+  :root {
+    /* メインカラー */
+    --color-bg-primary: 248 250 252; /* slate-50 */
+    --color-bg-secondary: 241 245 249; /* slate-100 */
+    --color-bg-card: 255 255 255; /* white */
+    --color-bg-accent: 59 130 246; /* blue-500 */
+    
+    /* テキストカラー */
+    --color-text-primary: 30 41 59; /* slate-800 */
+    --color-text-secondary: 71 85 105; /* slate-600 */
+    --color-text-muted: 100 116 139; /* slate-500 */
+    --color-text-accent: 59 130 246; /* blue-500 */
+    --color-text-accent-hover: 37 99 235; /* blue-600 */
+    --color-text-on-accent: 255 255 255; /* white */
+    
+    /* ボーダーカラー */
+    --color-border-light: 226 232 240; /* slate-200 */
+    --color-border: 203 213 225; /* slate-300 */
+  }
+
+  .dark {
+    /* メインカラー */
+    --color-bg-primary: 15 23 42; /* slate-900 */
+    --color-bg-secondary: 30 41 59; /* slate-800 */
+    --color-bg-card: 51 65 85; /* slate-700 */
+    --color-bg-accent: 37 99 235; /* blue-600 */
+    
+    /* テキストカラー */
+    --color-text-primary: 248 250 252; /* slate-50 */
+    --color-text-secondary: 226 232 240; /* slate-200 */
+    --color-text-muted: 148 163 184; /* slate-400 */
+    --color-text-accent: 96 165 250; /* blue-400 */
+    --color-text-accent-hover: 147 197 253; /* blue-300 */
+    --color-text-on-accent: 255 255 255; /* white */
+    
+    /* ボーダーカラー */
+    --color-border-light: 51 65 85; /* slate-700 */
+    --color-border: 71 85 105; /* slate-600 */
+  }
+
   body {
-    @apply bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-200 transition-colors duration-200;
+    background-color: rgb(var(--color-bg-primary));
+    color: rgb(var(--color-text-primary));
+    @apply transition-colors duration-200;
+  }
+  
+  /* 基本タイポグラフィー */
+  h1, h2, h3, h4, h5, h6 {
+    color: rgb(var(--color-text-primary));
   }
   
   h1 {
@@ -19,10 +66,75 @@
   
   p {
     @apply mb-4;
+    color: rgb(var(--color-text-secondary));
   }
   
   a {
-    @apply text-blue-500 dark:text-blue-400 hover:underline transition-all;
+    color: rgb(var(--color-text-accent));
+    @apply hover:underline transition-colors;
+  }
+
+  /* ヘッダースタイル */
+  .header-scrolled {
+    background-color: rgba(var(--color-bg-card), 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgb(var(--color-border-light));
+    @apply shadow-sm;
+  }
+  
+  .header-transparent {
+    background-color: transparent;
+  }
+  
+  .dark .header-transparent {
+    background-color: rgba(var(--color-bg-primary), 0.3);
+  }
+
+  /* セクションとコンテナのスタイル */
+  .bg-primary {
+    background-color: rgb(var(--color-bg-primary));
+  }
+  
+  .bg-secondary {
+    background-color: rgb(var(--color-bg-secondary));
+  }
+  
+  .bg-card {
+    background-color: rgb(var(--color-bg-card));
+  }
+  
+  .bg-accent {
+    background-color: rgb(var(--color-bg-accent));
+  }
+  
+  /* テキストカラークラス */
+  .text-primary {
+    color: rgb(var(--color-text-primary));
+  }
+  
+  .text-secondary {
+    color: rgb(var(--color-text-secondary));
+  }
+  
+  .text-muted {
+    color: rgb(var(--color-text-muted));
+  }
+  
+  .text-accent {
+    color: rgb(var(--color-text-accent));
+  }
+  
+  .text-on-accent {
+    color: rgb(var(--color-text-on-accent));
+  }
+  
+  /* ボーダースタイル */
+  .border-light {
+    border-color: rgb(var(--color-border-light));
+  }
+  
+  .border-standard {
+    border-color: rgb(var(--color-border));
   }
 }
 
@@ -32,15 +144,37 @@
   }
   
   .btn-primary {
-    @apply bg-blue-500 text-white dark:bg-blue-600 px-4 py-2 rounded-md transition-colors hover:opacity-90;
+    background-color: rgb(var(--color-bg-accent));
+    color: rgb(var(--color-text-on-accent));
+    @apply px-4 py-2 rounded-md transition-colors hover:opacity-90;
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    color: rgb(var(--color-text-accent));
+    border: 1px solid rgb(var(--color-text-accent));
+    @apply px-4 py-2 rounded-md transition-colors;
+  }
+  
+  .btn-outline:hover {
+    background-color: rgb(var(--color-bg-accent));
+    color: rgb(var(--color-text-on-accent));
   }
   
   .section {
     @apply py-12 md:py-16;
+    background-color: rgb(var(--color-bg-primary));
+  }
+  
+  .section-alt {
+    @apply py-12 md:py-16;
+    background-color: rgb(var(--color-bg-secondary));
   }
   
   .card {
-    @apply bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 transition-all hover:shadow-lg;
+    background-color: rgb(var(--color-bg-card));
+    border: 1px solid rgb(var(--color-border-light));
+    @apply rounded-lg shadow-md p-6 transition-all hover:shadow-lg;
   }
 }
 
@@ -50,9 +184,10 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-gray-100 dark:bg-slate-700;
+  background-color: rgb(var(--color-bg-secondary));
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-300 dark:bg-slate-500 rounded-full;
+  background-color: rgb(var(--color-border));
+  @apply rounded-full;
 }

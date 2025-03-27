@@ -18,6 +18,34 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className="scroll-smooth">
+      <head>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            try {
+              (function() {
+                if (typeof window !== 'undefined') {
+                  let savedTheme;
+                  try {
+                    savedTheme = localStorage.getItem('theme');
+                  } catch (e) {
+                    console.error('LocalStorage access error:', e);
+                  }
+                  
+                  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  
+                  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                }
+              })();
+            } catch (e) {
+              console.error('Theme initialization error:', e);
+            }
+          `
+        }} />
+      </head>
       <body className={inter.className}>
         <div className="flex flex-col min-h-screen">
           <Header />

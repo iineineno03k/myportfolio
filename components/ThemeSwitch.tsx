@@ -4,38 +4,52 @@ import { useState, useEffect } from 'react'
 
 const ThemeSwitch = () => {
   const [isDarkMode, setIsDarkMode] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
+  // DOMのクラス状態をチェックする関数
+  const checkDarkMode = () => {
+    return document.documentElement.classList.contains('dark');
+  };
+
+  // useEffectでマウント時にダークモード状態を同期
   useEffect(() => {
-    // 初期ロード時にシステム設定またはローカルストレージから設定を取得
-    const savedTheme = localStorage.getItem('theme')
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      setIsDarkMode(true)
-      document.documentElement.classList.add('dark')
-    } else {
-      setIsDarkMode(false)
-      document.documentElement.classList.remove('dark')
-    }
-  }, [])
+    setMounted(true);
+    setIsDarkMode(checkDarkMode());
+  }, []);
 
   const toggleTheme = () => {
-    if (isDarkMode) {
-      document.documentElement.classList.remove('dark')
-      localStorage.setItem('theme', 'light')
-      setIsDarkMode(false)
-    } else {
-      document.documentElement.classList.add('dark')
-      localStorage.setItem('theme', 'dark')
-      setIsDarkMode(true)
+    try {
+      const newDarkModeState = !isDarkMode;
+      
+      if (newDarkModeState) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      
+      try {
+        localStorage.setItem('theme', newDarkModeState ? 'dark' : 'light');
+      } catch (e) {
+        console.error('LocalStorage save error:', e);
+      }
+      
+      setIsDarkMode(newDarkModeState);
+    } catch (e) {
+      console.error('Theme toggle error:', e);
     }
+  };
+
+  // Hydration対策：コンポーネントがマウントされるまで何も表示しない
+  if (!mounted) {
+    return <div className="w-5 h-5" />;  // スペースホルダーを返してレイアウトシフトを防ぐ
   }
 
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors"
+      className="p-2 rounded-full text-secondary hover:bg-secondary transition-colors"
       aria-label={isDarkMode ? 'ライトモードに切り替え' : 'ダークモードに切り替え'}
+      type="button"
     >
       {isDarkMode ? (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">

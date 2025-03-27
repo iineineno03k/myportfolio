@@ -9,7 +9,7 @@ interface TechBadgeProps {
 }
 
 const TechBadge = ({ name }: TechBadgeProps) => (
-  <span className="inline-block bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-200 text-xs px-2 py-1 rounded-md mr-2 mb-2">
+  <span className="inline-block bg-secondary text-secondary text-xs px-2 py-1 rounded-md mr-2 mb-2">
     {name}
   </span>
 )
@@ -53,7 +53,7 @@ const ProjectCard = ({
       
       <h3 className="text-xl font-bold mb-2">{title}</h3>
       
-      <p className="text-gray-600 dark:text-gray-300 mb-4">
+      <p className="mb-4">
         {description}
       </p>
       
@@ -69,7 +69,7 @@ const ProjectCard = ({
             href={demoLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-blue-500 text-white dark:bg-blue-600 px-3 py-1 rounded-md transition-colors hover:opacity-90 text-sm"
+            className="btn-primary text-sm"
           >
             デモを見る
           </Link>
@@ -80,7 +80,7 @@ const ProjectCard = ({
             href={codeLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark px-3 py-1 rounded-md transition-colors hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark text-sm"
+            className="btn-outline text-sm"
           >
             コードを見る
           </Link>

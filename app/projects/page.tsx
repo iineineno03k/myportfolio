@@ -27,11 +27,11 @@ export default function Projects() {
 
   return (
     <div className="pt-20">
-      <section className="section bg-slate-50 dark:bg-slate-900">
+      <section className="section-alt">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl font-bold mb-4">ポートフォリオ</h1>
-            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            <p className="text-secondary max-w-2xl mx-auto">
               これまでに手がけたハッカソンや個人開発作品を紹介します。
             </p>
           </div>
@@ -51,13 +51,13 @@ export default function Projects() {
           </div>
 
           <div className="text-center mt-12">
-            <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 inline-block">
+            <div className="card inline-block">
               <h2 className="text-xl font-bold mb-2">今後の取り組み</h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
+              <p className="text-secondary mb-4">
                 AI技術を活用した個人開発ポートフォリオを計画中です。<br />
                 継続的な学習と共に、実用的かつクリエイティブな作品を制作していきます。
               </p>
-              <p className="text-blue-500 dark:text-blue-400 font-semibold">
+              <p className="text-accent font-semibold">
                 Coming Soon...
               </p>
             </div>

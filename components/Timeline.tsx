@@ -18,16 +18,13 @@ const TimelineItem = ({ year, title, description, index }: TimelineItemProps) =>
       className="mb-8 flex"
     >
       <div className="flex flex-col items-center mr-4">
-        <div className="w-px h-full bg-gray-300 dark:bg-gray-600 flex-grow mb-2"></div>
-        <div className="rounded-full bg-primary-light dark:bg-primary-dark w-8 h-8 flex items-center justify-center text-white font-bold text-sm">
-          {index + 1}
-        </div>
-        <div className="w-px h-full bg-gray-300 dark:bg-gray-600 flex-grow mt-2"></div>
+        <div className="w-px h-full border-standard flex-grow mb-2"></div>
+        <div className="w-px h-full border-standard flex-grow mt-2"></div>
       </div>
-      <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-4 flex-grow">
-        <div className="text-sm text-gray-500 dark:text-gray-400">{year}</div>
+      <div className="card flex-grow">
+        <div className="text-sm text-muted">{year}</div>
         <h3 className="text-lg font-bold mb-2">{title}</h3>
-        <p className="text-gray-600 dark:text-gray-300">{description}</p>
+        <p className="mb-0">{description}</p>
       </div>
     </motion.div>
   )

@@ -30,12 +30,12 @@ const Header = () => {
     <header 
       className={`fixed w-full z-10 transition-all duration-200 ${
         isScrolled 
-          ? 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm shadow-sm' 
-          : 'bg-transparent'
+          ? 'header-scrolled' 
+          : 'header-transparent'
       }`}
     >
       <div className="container-custom flex items-center justify-between py-4">
-        <Link href="/" className="font-bold text-xl no-underline">
+        <Link href="/" className="font-bold text-xl no-underline text-primary">
           稲田裕次郎
         </Link>
         
@@ -47,8 +47,8 @@ const Header = () => {
               href={item.href}
               className={`no-underline ${
                 pathname === item.href
-                  ? 'font-semibold text-blue-500 dark:text-blue-400'
-                  : 'text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400'
+                  ? 'font-semibold text-accent'
+                  : 'text-secondary hover:text-accent'
               }`}
             >
               {item.name}
@@ -62,7 +62,7 @@ const Header = () => {
           <ThemeSwitch />
           <button
             type="button"
-            className="ml-4 text-gray-600 dark:text-gray-300"
+            className="ml-4 text-secondary"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -74,7 +74,7 @@ const Header = () => {
       
       {/* モバイルメニュー */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-slate-900 shadow-lg">
+        <div className="md:hidden bg-card border-t border-light">
           <div className="container-custom py-4 space-y-2">
             {navigation.map((item) => (
               <Link
@@ -82,8 +82,8 @@ const Header = () => {
                 href={item.href}
                 className={`block py-2 ${
                   pathname === item.href
-                    ? 'font-semibold text-primary-light dark:text-primary-dark'
-                    : 'text-gray-600 dark:text-gray-300'
+                    ? 'font-semibold text-accent'
+                    : 'text-secondary'
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >

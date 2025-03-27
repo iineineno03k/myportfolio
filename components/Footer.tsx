@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 const Footer = () => {
   const currentYear = new Date().getFullYear()
   
@@ -17,11 +15,11 @@ const Footer = () => {
   ]
   
   return (
-    <footer className="bg-gray-100 dark:bg-slate-800">
+    <footer className="bg-secondary border-t border-light">
       <div className="container-custom py-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <p className="text-sm text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-muted">
               &copy; {currentYear} 稲田裕次郎. All rights reserved.
             </p>
           </div>
@@ -33,7 +31,7 @@ const Footer = () => {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark transition-colors"
+                className="text-muted hover:text-accent transition-colors"
                 aria-label={link.name}
               >
                 {link.icon}
