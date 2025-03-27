@@ -3,25 +3,25 @@ import Image from 'next/image'
 
 export default function About() {
   const timelineItems = [
-    { 
-      year: '2018年3月', 
-      title: '慶應義塾志木高校卒業', 
-      description: '高校時代は文系クラスに所属。この頃はまだITやプログラミングには触れていませんでした。' 
+    {
+      year: '2018年3月',
+      title: '慶應義塾志木高校卒業',
+      description: '高校時代は文系クラスに所属。この頃はまだITやプログラミングには触れていませんでした。'
     },
-    { 
-      year: '2018年4月~2022年3月', 
-      title: '慶應義塾大学 法学部政治学科卒業', 
-      description: '大学では法学と政治学を学び、論理的思考力と多角的な視点を養いました。' 
+    {
+      year: '2018年4月~2022年3月',
+      title: '慶應義塾大学 法学部政治学科卒業',
+      description: '大学では法学と政治学を学び、論理的思考力と多角的な視点を養いました。'
     },
-    { 
-      year: '2022年4月~2024年6月', 
-      title: 'スミセイ情報システム入社（SIer）', 
-      description: '「受かりやすい」という理由でSIerに入社。しかし研修でプログラミングの面白さに目覚め、エンジニアとしてのキャリアをスタートしました。生命保険のシステムの設計などを担当。' 
+    {
+      year: '2022年4月~2024年6月',
+      title: '金融系SIer',
+      description: '「受かりやすい」という理由でSIerに入社。しかし研修でプログラミングの面白さに目覚め、エンジニアとしてのキャリアをスタートしました。生命保険のシステムの設計などを担当。'
     },
-    { 
-      year: '2024年7月〜現在', 
-      title: 'リクルート オフショアソリューション部', 
-      description: '現在はリクルートでシステム設計とリードの役割を担っています。多くの人に貢献できる立場を目指して日々スキルを磨いています。' 
+    {
+      year: '2024年7月〜現在',
+      title: '某メガベンチャー',
+      description: '現在は某メガベンチャーでシステム設計とリードの役割を担っています。多くの人に貢献できる立場を目指して日々スキルを磨いています。'
     },
   ]
 
@@ -30,25 +30,25 @@ export default function About() {
       <section className="section-alt">
         <div className="container-custom">
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center">自己紹介</h1>
-          
+
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="md:col-span-1">
               <div className="card sticky top-24">
                 <div className="mb-6 flex justify-center">
                   <div className="relative w-32 h-32 rounded-full overflow-hidden">
-                    <Image 
-                      src="/images/ine.jpeg" 
-                      alt="稲田裕次郎" 
+                    <Image
+                      src="/images/ine.jpeg"
+                      alt="稲田裕次郎"
                       fill
                       style={{ objectFit: 'cover' }}
                       priority
                     />
                   </div>
                 </div>
-                
+
                 <h2 className="text-xl font-bold mb-2 text-center">稲田裕次郎</h2>
                 <p className="text-secondary text-center mb-4">エンジニア / システム設計</p>
-                
+
                 <div className="border-t border-light pt-4 mb-4">
                   <h3 className="font-semibold mb-2">基本情報</h3>
                   <ul className="space-y-2 text-secondary">
@@ -58,11 +58,11 @@ export default function About() {
                     </li>
                     <li className="flex items-start">
                       <span className="font-medium mr-2">職業:</span>
-                      <span>エンジニア (リクルート)</span>
+                      <span>システムエンジニア</span>
                     </li>
                   </ul>
                 </div>
-                
+
                 <div className="border-t border-light pt-4">
                   <h3 className="font-semibold mb-2">得意分野</h3>
                   <ul className="space-y-1 text-secondary">
@@ -75,7 +75,7 @@ export default function About() {
                 </div>
               </div>
             </div>
-            
+
             <div className="md:col-span-2">
               <div className="card mb-8">
                 <h2 className="text-2xl font-bold mb-4">プロフィール</h2>
@@ -86,13 +86,13 @@ export default function About() {
                   これまでSIerでの経験を通じて、複雑なシステムの設計と実装を経験。生命保険システムのシステム設計や、関係部署との連携によるプロジェクト推進など、実践的なスキルを蓄積してきました。
                 </p>
                 <p className="text-secondary">
-                  現在はリクルートでのキャリアを通じて、より多くの人に貢献できるエンジニアを目指しています。将来的にはシステム全体の意思決定ができる存在になりたいという目標を持ち、日々スキルアップに励んでいます。
+                  現在はメガベンチャーでのキャリアを通じて、より多くの人に貢献できるエンジニアを目指しています。将来的にはシステム全体の意思決定ができる存在になりたいという目標を持ち、日々スキルアップに励んでいます。
                 </p>
               </div>
-              
+
               <div className="card mb-8">
                 <h2 className="text-2xl font-bold mb-4">強みと特徴</h2>
-                
+
                 <div className="mb-6">
                   <h3 className="text-xl font-semibold mb-2">思考の特性</h3>
                   <ul className="list-disc pl-5 text-secondary space-y-2">
@@ -102,7 +102,7 @@ export default function About() {
                     <li><span className="font-medium">全体俯瞰型:</span> 課題に取り組む前に全体像を把握することを重視</li>
                   </ul>
                 </div>
-                
+
                 <div className="mb-6">
                   <h3 className="text-xl font-semibold mb-2">技術的志向</h3>
                   <ul className="list-disc pl-5 text-secondary space-y-2">
@@ -111,7 +111,7 @@ export default function About() {
                     <li><span className="font-medium">理論と実践のバランス:</span> ドキュメント学習を基礎としつつ、実践の重要性も認識</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-semibold mb-2">チームでの立ち位置</h3>
                   <ul className="list-disc pl-5 text-secondary space-y-2">
@@ -121,7 +121,7 @@ export default function About() {
                   </ul>
                 </div>
               </div>
-              
+
               <div className="card">
                 <h2 className="text-2xl font-bold mb-4">経歴</h2>
                 <Timeline items={[...timelineItems].reverse()} />
