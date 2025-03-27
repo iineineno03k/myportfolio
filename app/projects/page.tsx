@@ -3,25 +3,25 @@ import ProjectCard from '@/components/ProjectCard'
 export default function Projects() {
   const projects = [
     {
-      title: 'ハッカソンポートフォリオ: 食材管理アプリ',
-      description: '48時間のハッカソンで開発した、冷蔵庫内の食材を管理し、賞味期限が近づくとレシピを提案するアプリ。チームでフロントエンド開発とデータ連携部分を担当し、優秀賞を受賞。',
-      technologies: ['React', 'TypeScript', 'Firebase'],
-      demoLink: undefined,
-      codeLink: undefined,
-    },
-    {
-      title: 'ハッカソンポートフォリオ: 健康記録ダッシュボード',
-      description: '健康データを可視化するダッシュボードアプリ。APIからデータを取得し、グラフ化して表示する機能を実装。ユーザーが自分の健康状態を理解しやすいUIを設計。',
-      technologies: ['React', 'Chart.js', 'Node.js'],
-      demoLink: undefined,
-      codeLink: undefined,
-    },
-    {
       title: 'ポートフォリオサイト（本サイト）',
-      description: 'Next.jsとTailwind CSSを使用した個人ポートフォリオサイト。レスポンシブデザインとダークモード対応を実装。',
+      description: 'Next.jsとTailwind CSSを使用した個人サイト。レスポンシブデザインとダークモード対応を実装。',
       technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
       demoLink: undefined,
-      codeLink: 'https://github.com/yourusername/portfolio',
+      codeLink: 'https://github.com/iineineno03k/myportfolio',
+    },
+    {
+      title: 'パコリスト',
+      description: '大人の行為を記録したり、大人の行為をした相手を記録するスマホアプリ',
+      technologies: ['ReactNative', 'TypeScript', 'Go'],
+      demoLink: 'https://apps.apple.com/ja/app/%E3%83%91%E3%82%B3%E3%83%AA%E3%82%B9%E3%83%88/id6743646567',
+      codeLink: undefined,
+    },
+    {
+      title: 'オレ技メーカー',
+      description: '自分だけの必殺技を作り、友達と必殺技のセンスを競うアプリ。LINEのミニアプリ（リポジトリは複数ある中の一つ）',
+      technologies: ['React', 'TypeScript', 'Material-UI', 'Java', 'Spring Boot', 'PostgreSQL'],
+      demoLink: 'https://protopedia.net/prototype/4938',
+      codeLink: 'https://github.com/iineineno03k/original-special-move-localbattle',
     },
   ]
 
@@ -32,10 +32,10 @@ export default function Projects() {
           <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl font-bold mb-4">ポートフォリオ</h1>
             <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              これまでに手がけたハッカソンポートフォリオや個人開発作品を紹介します。
+              これまでに手がけたハッカソンや個人開発作品を紹介します。
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <ProjectCard
@@ -49,7 +49,7 @@ export default function Projects() {
               />
             ))}
           </div>
-          
+
           <div className="text-center mt-12">
             <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 inline-block">
               <h2 className="text-xl font-bold mb-2">今後の取り組み</h2>
