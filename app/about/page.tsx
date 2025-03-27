@@ -3,24 +3,19 @@ import Timeline from '@/components/Timeline'
 export default function About() {
   const timelineItems = [
     { 
-      year: '2018年', 
+      year: '2018年3月', 
       title: '慶應義塾志木高校卒業', 
       description: '高校時代は文系クラスに所属。この頃はまだITやプログラミングには触れていませんでした。' 
     },
     { 
-      year: '2022年', 
-      title: '慶応大学 法学部政治学科卒業', 
+      year: '2018年4月~2022年3月', 
+      title: '慶應義塾大学 法学部政治学科卒業', 
       description: '大学では法学と政治学を学び、論理的思考力と多角的な視点を養いました。' 
     },
     { 
-      year: '2022年', 
+      year: '2022年4月~2024年6月', 
       title: 'スミセイ情報システム入社（SIer）', 
-      description: '「受かりやすい」という理由でSIerに入社。しかし研修でプログラミングの面白さに目覚め、エンジニアとしてのキャリアをスタートしました。生命保険の諾否決定システムの設計などを担当。' 
-    },
-    { 
-      year: '2024年6月', 
-      title: 'スミセイ情報システム退職', 
-      description: '自分の努力が評価されず、協力会社の意見が絶対視される環境に不満を感じ転身を決意しました。' 
+      description: '「受かりやすい」という理由でSIerに入社。しかし研修でプログラミングの面白さに目覚め、エンジニアとしてのキャリアをスタートしました。生命保険のシステムの設計などを担当。' 
     },
     { 
       year: '2024年7月〜現在', 
@@ -52,7 +47,7 @@ export default function About() {
                   <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                     <li className="flex items-start">
                       <span className="font-medium mr-2">学歴:</span>
-                      <span>慶応大学 法学部政治学科</span>
+                      <span>慶應義塾大学 法学部政治学科</span>
                     </li>
                     <li className="flex items-start">
                       <span className="font-medium mr-2">職業:</span>
@@ -122,7 +117,7 @@ export default function About() {
               
               <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6">
                 <h2 className="text-2xl font-bold mb-4">経歴</h2>
-                <Timeline items={timelineItems} />
+                <Timeline items={[...timelineItems].reverse()} />
               </div>
             </div>
           </div>
