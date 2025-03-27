@@ -19,37 +19,7 @@ export default function Home() {
 
   return (
     <>
-      <Hero />
-      
-      <section className="section-alt">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold">注目のポートフォリオ</h2>
-            <p className="text-secondary mt-2">
-              これまでに手がけた主要なポートフォリオの一部です
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {featuredProjects.map((project, index) => (
-              <ProjectCard
-                key={index}
-                title={project.title}
-                description={project.description}
-                technologies={project.technologies}
-                index={index}
-              />
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <Link href="/projects" className="btn-primary">
-              すべてのポートフォリオを見る
-            </Link>
-          </div>
-        </div>
-      </section>
-      
+      <Hero />      
       <section className="section">
         <div className="container-custom">
           <div className="text-center mb-12">

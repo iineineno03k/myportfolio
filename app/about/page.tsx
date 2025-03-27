@@ -51,13 +51,13 @@ export default function About() {
 
                 <div className="border-t border-light pt-4 mb-4">
                   <h3 className="font-semibold mb-2">基本情報</h3>
-                  <ul className="space-y-2 text-secondary">
-                    <li className="flex items-start">
-                      <span className="font-medium mr-2">学歴:</span>
+                  <ul className="space-y-3 text-secondary">
+                    <li className="flex flex-col">
+                      <span className="font-medium mb-1">学歴</span>
                       <span>慶應義塾大学 法学部政治学科</span>
                     </li>
-                    <li className="flex items-start">
-                      <span className="font-medium mr-2">職業:</span>
+                    <li className="flex flex-col">
+                      <span className="font-medium mb-1">職業</span>
                       <span>システムエンジニア</span>
                     </li>
                   </ul>
@@ -107,7 +107,7 @@ export default function About() {
                   <h3 className="text-xl font-semibold mb-2">技術的志向</h3>
                   <ul className="list-disc pl-5 text-secondary space-y-2">
                     <li><span className="font-medium">設計志向:</span> システム設計を得意とし、共通認識を作り上げるリード的役割を好む</li>
-                    <li><span className="font-medium">パターン活用:</span> GoFデザインパターン（特にFactory MethodやStrategy）を実践的に活用</li>
+                    <li><span className="font-medium">パターン活用:</span> GoFデザインパターン（特にFactory MethodやStrategy Pattern）を実践的に活用</li>
                     <li><span className="font-medium">理論と実践のバランス:</span> ドキュメント学習を基礎としつつ、実践の重要性も認識</li>
                   </ul>
                 </div>
