@@ -3,7 +3,7 @@ import Link from 'next/link'
 import ProjectCard from '@/components/ProjectCard'
 
 export default function Home() {
-  // フィーチャープロジェクト
+  // フィーチャーポートフォリオ
   const featuredProjects = [
     {
       title: 'ハッカソンプロジェクト: 食材管理アプリ',
@@ -24,9 +24,9 @@ export default function Home() {
       <section className="section bg-gray-50 dark:bg-slate-900">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold">注目のプロジェクト</h2>
+            <h2 className="text-3xl font-bold">注目のポートフォリオ</h2>
             <p className="text-gray-600 dark:text-gray-300 mt-2">
-              これまでに手がけた主要なプロジェクトの一部です
+              これまでに手がけた主要なポートフォリオの一部です
             </p>
           </div>
           
@@ -44,7 +44,7 @@ export default function Home() {
           
           <div className="text-center mt-12">
             <Link href="/projects" className="btn-primary">
-              すべてのプロジェクトを見る
+              すべてのポートフォリオを見る
             </Link>
           </div>
         </div>
@@ -92,7 +92,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-2">チームリード</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                共通認識の構築と方向性の提示を通じて、チームの生産性向上とプロジェクト成功に貢献します。
+                共通認識の構築と方向性の提示を通じて、チームの生産性向上とポートフォリオ成功に貢献します。
               </p>
             </div>
           </div>

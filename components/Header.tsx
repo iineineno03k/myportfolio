@@ -22,7 +22,7 @@ const Header = () => {
   const navigation = [
     { name: 'ホーム', href: '/' },
     { name: '自己紹介', href: '/about' },
-    { name: 'プロジェクト', href: '/projects' },
+    { name: 'ポートフォリオ', href: '/projects' },
     // { name: 'ブログ', href: '/blog' }, // 後で実装
   ]
 

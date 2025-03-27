@@ -36,7 +36,7 @@ const Hero = () => {
               href="/projects" 
               className="border border-blue-500 dark:border-blue-400 text-blue-500 dark:text-blue-400 px-4 py-2 rounded-md transition-colors hover:bg-blue-500 hover:text-white dark:hover:bg-blue-400"
             >
-              プロジェクトを見る
+              ポートフォリオを見る
             </Link>
           </div>
         </motion.div>
