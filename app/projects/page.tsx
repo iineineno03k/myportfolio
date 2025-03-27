@@ -18,7 +18,7 @@ export default function Projects() {
     },
     {
       title: 'オレ技メーカー',
-      description: '自分だけの必殺技を作り、友達と必殺技のセンスを競うアプリ。LINEのミニアプリ（リポジトリは複数ある中の一つ）',
+      description: '自分だけの必殺技を作り、友達と必殺技のセンスを競うアプリ。LINEのミニアプリ（コードは複数ある中の一つ）',
       technologies: ['React', 'TypeScript', 'Material-UI', 'Java', 'Spring Boot', 'PostgreSQL'],
       demoLink: 'https://protopedia.net/prototype/4938',
       codeLink: 'https://github.com/iineineno03k/original-special-move-localbattle',
