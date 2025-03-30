@@ -7,8 +7,8 @@ import { Metadata } from 'next'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: '稲田裕次郎のポートフォリオ',
-  description: 'エンジニア稲田裕次郎のポートフォリオサイトです。自己紹介、制作物、ブログを掲載しています。',
+  title: 'いなゆうのポートフォリオ',
+  description: 'エンジニアいなゆうのポートフォリオサイトです。自己紹介、制作物、ブログを掲載しています。',
 }
 
 export default function RootLayout({

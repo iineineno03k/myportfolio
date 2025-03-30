@@ -15,7 +15,7 @@ const Hero = () => {
           className="text-center md:text-left"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            稲田裕次郎
+            いなゆう
             <span className="block text-xl md:text-2xl font-medium text-secondary mt-2">
               エンジニア / システム設計
             </span>
@@ -50,7 +50,7 @@ const Hero = () => {
           <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-lg border-4 border-light">
             <Image 
               src="/images/ine.jpeg" 
-              alt="稲田裕次郎" 
+              alt="いなゆう" 
               fill
               style={{ objectFit: 'cover' }}
               priority

@@ -36,7 +36,7 @@ const Header = () => {
     >
       <div className="container-custom flex items-center justify-between py-4">
         <Link href="/" className="font-bold text-xl no-underline text-primary">
-          稲田裕次郎
+          いなゆう
         </Link>
         
         {/* デスクトップナビゲーション */}

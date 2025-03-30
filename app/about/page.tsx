@@ -38,7 +38,7 @@ export default function About() {
                   <div className="relative w-32 h-32 rounded-full overflow-hidden">
                     <Image
                       src="/images/ine.jpeg"
-                      alt="稲田裕次郎"
+                      alt="いなゆう"
                       fill
                       style={{ objectFit: 'cover' }}
                       priority
@@ -46,7 +46,7 @@ export default function About() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold mb-2 text-center">稲田裕次郎</h2>
+                <h2 className="text-xl font-bold mb-2 text-center">いなゆう</h2>
                 <p className="text-secondary text-center mb-4">エンジニア / システム設計</p>
 
                 <div className="border-t border-light pt-4 mb-4">
