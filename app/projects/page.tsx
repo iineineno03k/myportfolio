@@ -3,18 +3,28 @@ import ProjectCard from '@/components/ProjectCard'
 export default function Projects() {
   const projects = [
     {
+      title: 'ポコポコ　おとあわせ',
+      description: '音版神経衰弱。すっごくたのしいスマホアプリ',
+      technologies: ['ReactNative', 'TypeScript', 'RevenueCat'],
+      demoLink: 'https://apps.apple.com/jp/app/%E3%83%9D%E3%82%B3%E3%83%9D%E3%82%B3-%E3%81%8A%E3%81%A8%E3%81%82%E3%82%8F%E3%81%9B/id6744270269',
+      codeLink: undefined,
+      imageSrc: '/images/pokopoko.png'
+    },
+    {
       title: 'ポートフォリオサイト（本サイト）',
       description: 'Next.jsとTailwind CSSを使用した個人サイト。レスポンシブデザインとダークモード対応を実装。',
       technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
-      demoLink: undefined,
+      demoLink: 'https://myportfolio-sage-mu.vercel.app/',
       codeLink: 'https://github.com/iineineno03k/myportfolio',
+      imageSrc: '/images/ine.jpeg'
     },
     {
       title: 'パコリスト',
       description: '大人の行為を記録したり、大人の行為をした相手を記録するスマホアプリ',
       technologies: ['ReactNative', 'TypeScript', 'Go'],
-      demoLink: 'https://apps.apple.com/ja/app/%E3%83%91%E3%82%B3%E3%83%AA%E3%82%B9%E3%83%88/id6743646567',
+      demoLink: 'https://apps.apple.com/jp/app/%E3%83%91%E3%82%B3%E3%83%AA%E3%82%B9%E3%83%88/id6743646567',
       codeLink: undefined,
+      imageSrc: '/images/PACOLIST_icon.png'
     },
     {
       title: 'オレ技メーカー',
@@ -22,6 +32,7 @@ export default function Projects() {
       technologies: ['React', 'TypeScript', 'Material-UI', 'Java', 'Spring Boot', 'PostgreSQL'],
       demoLink: 'https://protopedia.net/prototype/4938',
       codeLink: 'https://github.com/iineineno03k/original-special-move-localbattle',
+      imageSrc: '/images/specialmove.png'
     },
   ]
 
@@ -46,6 +57,7 @@ export default function Projects() {
                 demoLink={project.demoLink}
                 codeLink={project.codeLink}
                 index={index}
+                imageSrc={project.imageSrc}
               />
             ))}
           </div>
