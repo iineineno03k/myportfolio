@@ -21,7 +21,7 @@ export default function Projects() {
     {
       title: 'パコリスト',
       description: '大人の行為を記録したり、大人の行為をした相手を記録するスマホアプリ',
-      technologies: ['ReactNative', 'TypeScript', 'Go'],
+      technologies: ['ReactNative', 'TypeScript', 'Go', 'Gin', 'GORM'],
       demoLink: 'https://apps.apple.com/jp/app/%E3%83%91%E3%82%B3%E3%83%AA%E3%82%B9%E3%83%88/id6743646567',
       codeLink: undefined,
       imageSrc: '/images/PACOLIST_icon.png'
